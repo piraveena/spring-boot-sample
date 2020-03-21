@@ -12,7 +12,7 @@ import org.springframework.security.oauth2.core.ClientAuthenticationMethod;
 import org.springframework.security.oauth2.core.oidc.IdTokenClaimNames;
 
 @Configuration
-public class OIDCAppConfig {
+public class OIDCAppRegistration {
 
     private static String CLIENT_REGISTRATION = "spring.security.oauth2.client.registration.wso2.";
     private static String WSO2_IS_PROPERTY = "spring.security.oauth2.client.provider.wso2.";
