@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OAuth2 Login </title>
+</head>
+<body>
+<div>
+    <div style="float:none">&nbsp;</div>
+    <div style="float:right">
+        <form th:action="@{/logout123}" method="post">
+            <input type="submit" value="Logout"/>
+        </form>
+    </div>
+</div>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LOAuth 2.0 Login with Spring Security</title>
+</head>
+<body>
+<div>
+    You are successfully logged in as <span style="font-weight:bold" th:text="${userName}"></span>
+</div>
+<div>
+    <div>
+        <span>Username:</span> <span style="font-weight:bold" th:text="${userName}"></span>
+    </div>
+    <div>
+        <span>Contry:</span> <span style="font-weight:bold" th:text="${country}"></span>
+    </div>
+    <div>
+        <span>EmailAddress:</span> <span style="font-weight:bold" th:text="${email}"></span>
+    </div>
+</div>
+</body>
+</html>
