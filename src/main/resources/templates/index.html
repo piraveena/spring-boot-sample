@@ -1,39 +1,24 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<html lang="en">
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
+    <metacharset="UTF-8" >
     <title>OAuth2 Login </title>
 </head>
 <body>
+<h1>Logged in as <span style="font-weight:bold" th:text="${userName}"></span></h1>
 <div>
     <div style="float:none">&nbsp;</div>
-    <div style="float:right">
-        <form th:action="@{/logout123}" method="post">
-            <input type="submit" value="Logout"/>
+    <div style="float:left">
+        <form th:action="@{/userinfo}" method="get">
+            <input type="submit" value="Get User Info"/>
         </form>
     </div>
 </div>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>LOAuth 2.0 Login with Spring Security</title>
-</head>
-<body>
 <div>
-    You are successfully logged in as <span style="font-weight:bold" th:text="${userName}"></span>
-</div>
-<div>
-    <div>
-        <span>Username:</span> <span style="font-weight:bold" th:text="${userName}"></span>
-    </div>
-    <div>
-        <span>Contry:</span> <span style="font-weight:bold" th:text="${country}"></span>
-    </div>
-    <div>
-        <span>EmailAddress:</span> <span style="font-weight:bold" th:text="${email}"></span>
+    <div style="float:none">&nbsp;</div>
+    <div style="float:right">
+        <form method="post" th:action="@{/logout-out}"  class="navbar-form navbar-right">
+            <button id="logout-button" type="submit" class="btn btn-danger">Logout</button>
+        </form>
     </div>
 </div>
 </body>
-</html>
